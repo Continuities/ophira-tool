@@ -1,0 +1,19 @@
+{
+  "name": "ophira-tool",
+  "version": "1.0.0",
+  "description": "Ophira harvests your emotions to sustain her",
+  "private": true,
+  "repository": "git@github.com:Continuities/ophira-tool.git",
+  "author": "Michael Townsend <michael@doublespeakgames.com>",
+  "license": "MPL2",
+  "scripts": {
+    "build": "docker-compose build",
+    "up": "docker-compose up -d",
+    "down": "docker-compose down",
+    "restart": "docker-compose restart",
+    "logs": "docker-compose logs -f",
+    "passwd": "sudo htpasswd -c server/admin.htpasswd admin",
+    "connect:app": "docker exec -ti reporting-tool.app /bin/bash",
+    "connect:server": "docker exec -ti reporting-tool.server /bin/bash"
+  }
+}

@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+
+  server:
+    container_name: reporting-tool.server
+    restart: always
+    build: ./server
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+
+  app:
+    container_name: reporting-tool.app
+    restart: always
+    build: ./app
+
+  smtp:
+    container_name: reporting-tool.smtp
+    image: namshi/smtp

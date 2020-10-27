@@ -1,0 +1,42 @@
+#input {
+  display: flex;
+  flex-direction: column;
+}
+
+#input > * {
+  margin-bottom: 20px;
+}
+
+#comment {
+  min-height: 200px;
+  resize: vertical;
+}
+
+#resource {
+  flex-grow: 1;
+}
+
+#anonymous {
+  display: inline;
+}
+
+#resource:invalid { 
+  color: gray; 
+}
+
+#anonymous:checked ~ #contact {
+  display: none
+}
+
+#anonymous:not(:checked) ~ label {
+  font-style: italic;
+  color: gray;
+}
+
+#contact {
+  margin-top: 20px;
+}
+
+#contact > input {
+  flex-grow: 1;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "reporting-tool-app",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mongodb": "^3.5.9",
+    "nodemailer": "^6.4.10"
+  }
+}
