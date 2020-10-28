@@ -28,7 +28,8 @@ const PORT = 8080;
   // Serve the reporting UI
   app.get('/', async (req, res) => {
     res.render('report', { 
-      style: 'report.css'
+      style: 'report.css',
+      script: 'report.js'
     });
   });
 

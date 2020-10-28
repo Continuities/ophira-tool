@@ -8,35 +8,12 @@
 }
 
 #comment {
-  min-height: 200px;
+  min-height: 100px;
   resize: vertical;
 }
 
-#resource {
-  flex-grow: 1;
-}
-
-#anonymous {
-  display: inline;
-}
-
-#resource:invalid { 
-  color: gray; 
-}
-
-#anonymous:checked ~ #contact {
-  display: none
-}
-
-#anonymous:not(:checked) ~ label {
-  font-style: italic;
-  color: gray;
-}
-
-#contact {
-  margin-top: 20px;
-}
-
-#contact > input {
-  flex-grow: 1;
+#counter {
+  font-size: .5em;
+  margin-bottom: 0px;
+  text-align: end;
 }

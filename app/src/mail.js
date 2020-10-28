@@ -12,8 +12,8 @@ import fs from 'fs';
 
 // TODO: Make these configurable
 const TO = 'michael@doublespeakgames.com';
-const FROM = '"Ophira" <report@ophirathestalker.ca>';
-const SUBJECT = 'Emotions for Ophira'
+const FROM = `"Ophira's Rage" <rage@ophirathestalker.ca>`;
+const SUBJECT = 'Rage for Ophira'
 
 function loadTemplate(name) {
   const base = fileURLToPath(import.meta.url);
@@ -49,7 +49,7 @@ export const sendReport = ({ comment }) => {
       if (error) {
         return console.error(error);
       }
-      console.log('Report sent: %s', info.messageId);
+      console.log('Rage sent: %s', info.messageId);
     });
 });
 };
