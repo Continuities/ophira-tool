@@ -1,21 +1,35 @@
 version: "3"
 
+volumes:
+  certbot-conf:
+  certbot-www:
+
 services:
 
   server:
-    container_name: reporting-tool.server
+    container_name: ophira.server
     restart: always
     build: ./server
+    volumes:
+      - certbot-conf:/etc/letsencrypt
+      - certbot-www:/var/www/certbot
     ports:
       - "80:80"
     depends_on:
       - app
 
   app:
-    container_name: reporting-tool.app
+    container_name: ophira.app
     restart: always
     build: ./app
 
   smtp:
-    container_name: reporting-tool.smtp
+    container_name: ophira.smtp
     image: namshi/smtp
+
+  certbot:
+    image: certbot/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    volumes:
+      - certbot-conf:/etc/letsencrypt
+      - certbot-www:/var/www/certbot
