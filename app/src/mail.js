@@ -11,7 +11,7 @@ import path from 'path';
 import fs from 'fs';
 
 // TODO: Make these configurable
-const TO = 'michael@doublespeakgames.com';
+const TO = 'vancorvid@gmail.com';
 const FROM = `"Ophira's Rage" <rage@ophirathestalker.ca>`;
 const SUBJECT = 'Rage for Ophira'
 
